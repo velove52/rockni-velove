@@ -1,7 +1,5 @@
 name: Build device
 
-name: Build device
-
 on:
   workflow_dispatch:
     inputs:
