@@ -43,7 +43,7 @@ jobs:
 
       - name: Retrieve ccache
         run: |
-          URL="https://github.com/${{ github.repository_owner }}/${{ vars.CACHE_REPO || 'distribution-cache' }}/releases/download/ccache/ccache-aarch64-${{ inputs.DEVICE }}.tar"
+          URL="https://github.com/ROCKNIX/${{ vars.CACHE_REPO || 'distribution-cache' }}/releases/download/ccache/ccache-aarch64-${{ inputs.DEVICE }}.tar"
           curl -L --fail --silent --show-error "$URL" | tar -xvf - || echo "Cache archive not found, skipping."     
 
       - name: Download aarch64-toolchain (${{ inputs.DEVICE }})
