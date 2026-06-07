@@ -1,7 +1,35 @@
 name: Build device
 
+name: Build device
+
 on:
   workflow_dispatch:
+    inputs:
+      PROJECT:
+        description: "The project name"
+        type: string
+        required: true
+        default: "Rockchip"
+      DEVICE:
+        description: "The device name"
+        type: string
+        required: true
+        default: "RK3566"
+      OWNER_LC:
+        description: "repo owner name"
+        type: string
+        required: true
+        default: "rocknix"
+      NIGHTLY:
+        description: "build nightly version"
+        type: string
+        required: true
+        default: "true"
+      OFFICIAL:
+        description: "build official version"
+        type: string
+        required: true
+        default: "false"
   workflow_call:
     inputs:
       PROJECT:
